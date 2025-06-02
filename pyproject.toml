@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "personal-diary"
+version = "0.1.0"
+description = "Веб-приложение для ведения личного дневника"
+authors = ["fwrkin <fedotovvva23@mail.ru>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^4.2"
+psycopg2-binary = "^2.9"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

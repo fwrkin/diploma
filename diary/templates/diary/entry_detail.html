@@ -1,0 +1,11 @@
+{% extends 'diary/base.html' %}
+{% block title %}{{ entry.title }}{% endblock %}
+{% block content %}
+    <h2>{{ entry.title }}</h2>
+    <p>{{ entry.content }}</p>
+    <p><small>Создано: {{ entry.created_at|date:"Y-m-d H:i" }}</small></p>
+    <p><small>Обновлено: {{ entry.updated_at|date:"Y-m-d H:i" }}</small></p>
+    <a href="{% url 'entry_edit' entry.pk %}" class="btn btn-warning">Редактировать</a>
+    <a href="{% url 'entry_delete' entry.pk %}" class="btn btn-danger">Удалить</a>
+    <a href="{% url 'entry_list' %}" class="btn btn-secondary">Назад к списку</a>
+{% endblock %}
